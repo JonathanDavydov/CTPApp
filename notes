@@ -1,0 +1,20 @@
+Create a Streamlit dashboard app with 4 sections, each showing one chart. Use Plotly for the charts and pandas for the data. Load the data from movie_ratings.csv, which contains userId, movieId, rating, timestamp, title, year, and a pipe-separated genres column. Do not guess column names; use these exactly.
+
+Layout for every section: Put a title and a clearly reserved text area above each chart (for example, an st.markdown block or st.container with room for a few paragraphs) where I can write my own explanation of the graph. Leave it as a visible placeholder if there is no text yet. Put the chart directly below it.
+
+Section 1: Genre Breakdown. A horizontal bar chart showing the distribution of genres among the movies that were rated, sorted from most to least common. In the explanation area above the chart, include this text exactly:
+
+multi-genre movies should be handled by distrubiting the genre along all given grenes. ex A four-genre movie therefore adds one to four different genre totals. 
+Label the x-axis "Number of movie-genre tags" since the counts will add up to more than the number of movies.
+
+Section 2: Genre Satisfaction. A horizontal bar chart of the average rating for each genre, sorted from highest to lowest. Add a vertical reference line for the overall mean rating and show the number of ratings next to each bar, so genres with very few ratings aren't misleading. Make clear which genres rank highest and which rank lowest.
+
+Section 3: Ratings Over Time. A line chart with movie release year (the year column) on the x-axis and mean rating on the y-axis. Add a faint bar chart or second panel underneath showing the number of ratings per year, since early years have little data and make the line noisy.
+
+Section 4: Best Movies, With a Floor. A dot plot of the top 5 best-rated movies that have at least 50 ratings, with movie titles on the y-axis and mean rating on the x-axis. Next to it, show a second dot plot for the top 5 when the floor is raised to 150 ratings. Include each movie's rating count in its label so it's clear how the floor changes which movies qualify. Add a short written note below the charts explaining what changed between the two floors.
+
+General requirements: Use a clean, consistent color scheme, and cache the data loading (st.cache_data) so the app runs fast.
+
+
+
+then i just asked claude to fix stuff up
